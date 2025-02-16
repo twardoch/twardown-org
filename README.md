@@ -33,7 +33,12 @@ Each component has its own repository with specific development instructions:
 - See `twardown-py/` for the Python implementation
 
 !!! important
-Run `sh ./02-check.sh` then implement the TODO and then run `sh ./03-up.sh`. Fix whatever fails (making it more robust), retry. 
+
+Instruction for the LLM: 
+
+```
+Run `sh ./02-check.sh`, then implement the @TODO.md instructions in priority order & fix what fails. The edit the @LOG.md to report on what you've done, then run `sh ./03-up.sh` fix & retry. Occasionally adjust @README.md to more accurately describe the project as it is, and update @TODO.md to just focus on the things TBD. 
+```
 
 ## License
 
