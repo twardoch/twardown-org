@@ -18,7 +18,7 @@
    - [x] Set up basic extension structure
    - [x] Add core dependencies
    - [x] Configure development environment
-   - [ ] Complete magic record implementation
+   - [ ] Complete implementation
    - [ ] Add comprehensive test coverage
    - [ ] Fix remaining type checking issues
    - [ ] Implement all core Markdown features
