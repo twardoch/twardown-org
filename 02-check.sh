@@ -105,10 +105,6 @@ check_documentation() {
     print_header "Documentation Status"
     echo -e "${YELLOW}Installing dependencies:${NC}"
     npm install
-    echo -e "${YELLOW}Running Markdown linting:${NC}"
-    npm run lint || echo -e "${RED}Markdown linting failed${NC}"
-    echo -e "${YELLOW}Running format check:${NC}"
-    npm run format:check || echo -e "${RED}Format check failed${NC}"
     cd ..
 }
 

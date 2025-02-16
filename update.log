@@ -1,10 +1,10 @@
-=== Update Script Log - Sun Feb 16 21:38:48 CET 2025 ===
--e 2025-02-16 21:38:48 - 
+=== Update Script Log - Sun Feb 16 21:47:01 CET 2025 ===
+-e 2025-02-16 21:47:01 - 
 [1;33m=== Starting Update Process ===[0m
--e 2025-02-16 21:38:48 - Configuration:
--e 2025-02-16 21:38:48 - - Repository Owner: twardoch
--e 2025-02-16 21:38:48 - - CI Wait Time: 30 seconds
--e 2025-02-16 21:38:48 - - Dry Run: false
--e 2025-02-16 21:38:48 - - Skip CI: false
--e 2025-02-16 21:38:48 - [1;33mInitializing/updating submodules...[0m
--e 2025-02-16 21:38:48 - [0;31mError: Failed to initialize/update submodules[0m
+-e 2025-02-16 21:47:01 - Configuration:
+-e 2025-02-16 21:47:01 - - Repository Owner: twardoch
+-e 2025-02-16 21:47:01 - - CI Wait Time: 30 seconds
+-e 2025-02-16 21:47:01 - - Dry Run: false
+-e 2025-02-16 21:47:01 - - Skip CI: false
+-e 2025-02-16 21:47:01 - [1;33mInitializing/updating submodules...[0m
+-e 2025-02-16 21:47:01 - [0;31mError: Failed to initialize/update submodules[0m
