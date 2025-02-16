@@ -1,346 +1,26 @@
-.
-├── .DS_Store
-├── .gitmodules
-├── .mypy_cache
-│   ├── .gitignore
-│   ├── 3.12
-│   │   ├── @plugins_snapshot.json
-│   │   ├── __future__.data.json
-│   │   ├── __future__.meta.json
-│   │   ├── _ast.data.json
-│   │   ├── _ast.meta.json
-│   │   ├── _asyncio.data.json
-│   │   ├── _asyncio.meta.json
-│   │   ├── _bisect.data.json
-│   │   ├── _bisect.meta.json
-│   │   ├── _bz2.data.json
-│   │   ├── _bz2.meta.json
-│   │   ├── _codecs.data.json
-│   │   ├── _codecs.meta.json
-│   │   ├── _collections_abc.data.json
-│   │   ├── _collections_abc.meta.json
-│   │   ├── _compression.data.json
-│   │   ├── _compression.meta.json
-│   │   ├── _contextvars.data.json
-│   │   ├── _contextvars.meta.json
-│   │   ├── _ctypes.data.json
-│   │   ├── _ctypes.meta.json
-│   │   ├── _decimal.data.json
-│   │   ├── _decimal.meta.json
-│   │   ├── _frozen_importlib.data.json
-│   │   ├── _frozen_importlib.meta.json
-│   │   ├── _frozen_importlib_external.data.json
-│   │   ├── _frozen_importlib_external.meta.json
-│   │   ├── _io.data.json
-│   │   ├── _io.meta.json
-│   │   ├── _locale.data.json
-│   │   ├── _locale.meta.json
-│   │   ├── _operator.data.json
-│   │   ├── _operator.meta.json
-│   │   ├── _pytest
-│   │   │   ├── __init__.data.json
-│   │   │   ├── __init__.meta.json
-│   │   │   ├── _argcomplete.data.json
-│   │   │   ├── _argcomplete.meta.json
-│   │   │   ├── _code
-│   │   │   │   ├── __init__.data.json
-│   │   │   │   ├── __init__.meta.json
-│   │   │   │   ├── code.data.json
-│   │   │   │   ├── code.meta.json
-│   │   │   │   ├── source.data.json
-│   │   │   │   └── source.meta.json
-│   │   │   ├── _io
-│   │   │   │   ├── __init__.data.json
-│   │   │   │   ├── __init__.meta.json
-│   │   │   │   ├── pprint.data.json
-│   │   │   │   ├── pprint.meta.json
-│   │   │   │   ├── saferepr.data.json
-│   │   │   │   ├── saferepr.meta.json
-│   │   │   │   ├── terminalwriter.data.json
-│   │   │   │   ├── terminalwriter.meta.json
-│   │   │   │   ├── wcwidth.data.json
-│   │   │   │   └── wcwidth.meta.json
-│   │   │   ├── _version.data.json
-│   │   │   ├── _version.meta.json
-│   │   │   ├── assertion
-│   │   │   │   ├── __init__.data.json
-│   │   │   │   ├── __init__.meta.json
-│   │   │   │   ├── rewrite.data.json
-│   │   │   │   ├── rewrite.meta.json
-│   │   │   │   ├── truncate.data.json
-│   │   │   │   ├── truncate.meta.json
-│   │   │   │   ├── util.data.json
-│   │   │   │   └── util.meta.json
-│   │   │   ├── cacheprovider.data.json
-│   │   │   ├── cacheprovider.meta.json
-│   │   │   ├── capture.data.json
-│   │   │   ├── capture.meta.json
-│   │   │   ├── compat.data.json
-│   │   │   ├── compat.meta.json
-│   │   │   ├── config
-│   │   │   │   ├── __init__.data.json
-│   │   │   │   ├── __init__.meta.json
-│   │   │   │   ├── argparsing.data.json
-│   │   │   │   ├── argparsing.meta.json
-│   │   │   │   ├── compat.data.json
-│   │   │   │   ├── compat.meta.json
-│   │   │   │   ├── exceptions.data.json
-│   │   │   │   ├── exceptions.meta.json
-│   │   │   │   ├── findpaths.data.json
-│   │   │   │   └── findpaths.meta.json
-│   │   │   ├── debugging.data.json
-│   │   │   ├── debugging.meta.json
-│   │   │   ├── deprecated.data.json
-│   │   │   ├── deprecated.meta.json
-│   │   │   ├── doctest.data.json
-│   │   │   ├── doctest.meta.json
-│   │   │   ├── fixtures.data.json
-│   │   │   ├── fixtures.meta.json
-│   │   │   ├── freeze_support.data.json
-│   │   │   ├── freeze_support.meta.json
-│   │   │   ├── helpconfig.data.json
-│   │   │   ├── helpconfig.meta.json
-│   │   │   ├── hookspec.data.json
-│   │   │   ├── hookspec.meta.json
-│   │   │   ├── legacypath.data.json
-│   │   │   ├── legacypath.meta.json
-│   │   │   ├── logging.data.json
-│   │   │   ├── logging.meta.json
-│   │   │   ├── main.data.json
-│   │   │   ├── main.meta.json
-│   │   │   ├── mark
-│   │   │   │   ├── __init__.data.json
-│   │   │   │   ├── __init__.meta.json
-│   │   │   │   ├── expression.data.json
-│   │   │   │   ├── expression.meta.json
-│   │   │   │   ├── structures.data.json
-│   │   │   │   └── structures.meta.json
-│   │   │   ├── monkeypatch.data.json
-│   │   │   ├── monkeypatch.meta.json
-│   │   │   ├── nodes.data.json
-│   │   │   ├── nodes.meta.json
-│   │   │   ├── outcomes.data.json
-│   │   │   ├── outcomes.meta.json
-│   │   │   ├── pathlib.data.json
-│   │   │   ├── pathlib.meta.json
-│   │   │   ├── pytester.data.json
-│   │   │   ├── pytester.meta.json
-│   │   │   ├── pytester_assertions.data.json
-│   │   │   ├── pytester_assertions.meta.json
-│   │   │   ├── python.data.json
-│   │   │   ├── python.meta.json
-│   │   │   ├── python_api.data.json
-│   │   │   ├── python_api.meta.json
-│   │   │   ├── recwarn.data.json
-│   │   │   ├── recwarn.meta.json
-│   │   │   ├── reports.data.json
-│   │   │   ├── reports.meta.json
-│   │   │   ├── runner.data.json
-│   │   │   ├── runner.meta.json
-│   │   │   ├── scope.data.json
-│   │   │   ├── scope.meta.json
-│   │   │   ├── stash.data.json
-│   │   │   ├── stash.meta.json
-│   │   │   ├── terminal.data.json
-│   │   │   ├── terminal.meta.json
-│   │   │   ├── timing.data.json
-│   │   │   ├── timing.meta.json
-│   │   │   ├── tmpdir.data.json
-│   │   │   ├── tmpdir.meta.json
-│   │   │   ├── warning_types.data.json
-│   │   │   ├── warning_types.meta.json
-│   │   │   ├── warnings.data.json
-│   │   │   └── warnings.meta.json
-│   │   ├── _queue.data.json
-│   │   ├── _queue.meta.json
-│   │   ├── _socket.data.json
-│   │   ├── _socket.meta.json
-│   │   ├── _ssl.data.json
-│   │   ├── _ssl.meta.json
-│   │   ├── _struct.data.json
-│   │   ├── _struct.meta.json
-│   │   ├── _thread.data.json
-│   │   ├── _thread.meta.json
-│   │   ├── _typeshed
-│   │   │   ├── __init__.data.json
-│   │   │   ├── __init__.meta.json
-│   │   │   ├── importlib.data.json
-│   │   │   └── importlib.meta.json
-│   │   ├── _warnings.data.json
-│   │   ├── _warnings.meta.json
-│   │   ├── _weakref.data.json
-│   │   ├── _weakref.meta.json
-│   │   ├── _weakrefset.data.json
-│   │   ├── _weakrefset.meta.json
-│   │   ├── abc.data.json
-│   │   ├── abc.meta.json
-│   │   ├── argcomplete
-│   │   │   ├── __init__.data.json
-│   │   │   ├── __init__.meta.json
-│   │   │   ├── completers.data.json
-│   │   │   ├── completers.meta.json
-│   │   │   ├── exceptions.data.json
-│   │   │   ├── exceptions.meta.json
-│   │   │   ├── finders.data.json
-│   │   │   ├── finders.meta.json
-│   │   │   ├── io.data.json
-│   │   │   ├── io.meta.json
-│   │   │   ├── lexers.data.json
-│   │   │   ├── lexers.meta.json
-│   │   │   ├── packages
-│   │   │   │   ├── __init__.data.json
-│   │   │   │   ├── __init__.meta.json
-│   │   │   │   ├── _argparse.data.json
-│   │   │   │   ├── _argparse.meta.json
-│   │   │   │   ├── _shlex.data.json
-│   │   │   │   └── _shlex.meta.json
-│   │   │   ├── shell_integration.data.json
-│   │   │   └── shell_integration.meta.json
-│   │   ├── argparse.data.json
-│   │   ├── argparse.meta.json
-│   │   ├── array.data.json
-│   │   ├── array.meta.json
-│   │   ├── ast.data.json
-│   │   ├── ast.meta.json
-│   │   ├── asyncio
-│   │   │   ├── __init__.data.json
-│   │   │   ├── __init__.meta.json
-│   │   │   ├── base_events.data.json
-│   │   │   ├── base_events.meta.json
-│   │   │   ├── coroutines.data.json
-│   │   │   ├── coroutines.meta.json
-│   │   │   ├── events.data.json
-│   │   │   ├── events.meta.json
-│   │   │   ├── exceptions.data.json
-│   │   │   ├── exceptions.meta.json
-│   │   │   ├── futures.data.json
-│   │   │   ├── futures.meta.json
-│   │   │   ├── locks.data.json
-│   │   │   ├── locks.meta.json
-│   │   │   ├── mixins.data.json
-│   │   │   ├── mixins.meta.json
-│   │   │   ├── protocols.data.json
-│   │   │   ├── protocols.meta.json
-│   │   │   ├── queues.data.json
-│   │   │   ├── queues.meta.json
-│   │   │   ├── runners.data.json
-│   │   │   ├── runners.meta.json
-│   │   │   ├── selector_events.data.json
-│   │   │   ├── selector_events.meta.json
-│   │   │   ├── streams.data.json
-│   │   │   ├── streams.meta.json
-│   │   │   ├── subprocess.data.json
-│   │   │   ├── subprocess.meta.json
-│   │   │   ├── taskgroups.data.json
-│   │   │   ├── taskgroups.meta.json
-│   │   │   ├── tasks.data.json
-│   │   │   ├── tasks.meta.json
-│   │   │   ├── threads.data.json
-│   │   │   ├── threads.meta.json
-│   │   │   ├── timeouts.data.json
-│   │   │   ├── timeouts.meta.json
-│   │   │   ├── transports.data.json
-│   │   │   ├── transports.meta.json
-│   │   │   ├── unix_events.data.json
-│   │   │   └── unix_events.meta.json
-│   │   ├── atexit.data.json
-│   │   ├── atexit.meta.json
-│   │   ├── bdb.data.json
-│   │   ├── bdb.meta.json
-│   │   ├── bisect.data.json
-│   │   ├── bisect.meta.json
-│   │   ├── builtins.data.json
-│   │   ├── builtins.meta.json
-│   │   ├── bz2.data.json
-│   │   ├── bz2.meta.json
-│   │   ├── cmd.data.json
-│   │   ├── cmd.meta.json
-│   │   ├── codecs.data.json
-│   │   ├── codecs.meta.json
-│   │   ├── collections
-│   │   │   ├── __init__.data.json
-│   │   │   ├── __init__.meta.json
-│   │   │   ├── abc.data.json
-│   │   │   └── abc.meta.json
-│   │   ├── colorama
-│   │   │   ├── __init__.data.json
-│   │   │   ├── __init__.meta.json
-│   │   │   ├── ansi.data.json
-│   │   │   ├── ansi.meta.json
-│   │   │   ├── ansitowin32.data.json
-│   │   │   ├── ansitowin32.meta.json
-│   │   │   ├── initialise.data.json
-│   │   │   └── initialise.meta.json
-│   │   ├── concurrent
-│   │   │   ├── __init__.data.json
-│   │   │   ├── __init__.meta.json
-│   │   │   └── futures
-│   │   │       ├── __init__.data.json
-│   │   │       ├── __init__.meta.json
-│   │   │       ├── _base.data.json
-│   │   │       ├── _base.meta.json
-│   │   │       ├── process.data.json
-│   │   │       ├── process.meta.json
-│   │   │       ├── thread.data.json
-│   │   │       └── thread.meta.json
-│   │   ├── contextlib.data.json
-│   │   ├── contextlib.meta.json
-│   │   ├── contextvars.data.json
-│   │   ├── contextvars.meta.json
-│   │   ├── copy.data.json
-│   │   ├── copy.meta.json
-│   │   ├── copyreg.data.json
-│   │   ├── copyreg.meta.json
-│   │   ├── ctypes
-│   │   │   ├── __init__.data.json
-│   │   │   ├── __init__.meta.json
-│   │   │   ├── _endian.data.json
-│   │   │   └── _endian.meta.json
-│   │   ├── dataclasses.data.json
-│   │   ├── dataclasses.meta.json
-│   │   ├── datetime.data.json
-│   │   ├── datetime.meta.json
-│   │   ├── decimal.data.json
-│   │   ├── decimal.meta.json
-│   │   ├── dis.data.json
-│   │   ├── dis.meta.json
-│   │   ├── doctest.data.json
-│   │   ├── doctest.meta.json
-│   │   ├── email
-│   │   │   ├── __init__.data.json
-│   │   │   ├── __init__.meta.json
-│   │   │   ├── _policybase.data.json
-│   │   │   ├── _policybase.meta.json
-│   │   │   ├── charset.data.json
-│   │   │   ├── charset.meta.json
-│   │   │   ├── contentmanager.data.json
-│   │   │   ├── contentmanager.meta.json
-│   │   │   ├── errors.data.json
-│   │   │   ├── errors.meta.json
-│   │   │   ├── header.data.json
-│   │   │   ├── header.meta.json
-│   │   │   ├── message.data.json
-│   │   │   ├── message.meta.json
-│   │   │   ├── policy.data.json
-│   │   │   └── policy.meta.json
-│   │   ├── enum.data.json
-│   │   ├── enum.meta.json
-│   │   ├── errno.data.json
-│   │   ├── errno.meta.json
-│   │   ├── fnmatch.data.json
-│   │   ├── fnmatch.meta.json
-│   │   ├── fractions.data.json
-│   │   ├── fractions.meta.json
-│   │   ├── functools.data.json
-│   │   ├── functools.meta.json
-│   │   ├── gc.data.json
-│   │   ├── gc.meta.json
-│   │   ├── genericpath.data.json
-│   │   ├── genericpath.meta.json
-│   │   ├── gettext.data.json
-│   │   ├── gettext.meta.json
-│   │   ├── glob.data.json
-│   │   ├── glob.meta.json
+## SpecStory
+
+## Untitled (16/02/2025, 21:27:19)
+
+_**User**_
+
+Run `sh ./02-check.sh`, then implement the @TODO.md instructions in priority order & fix what fails. The edit the @LOG.md to report on what you've done, then run `sh ./03-up.sh` fix & retry. Occasionally adjust @README.md to more accurately describe the project as it is, and update @TODO.md 
+
+---
+
+_**Assistant**_
+
+I'll help you with this task. Let's start by running the check script to see what needs attention.
+
+---
+
+_****_
+
+```bash
+sh ./02-check.sh
+```
+
+```
 │   │   ├── gzip.data.json
 │   │   ├── gzip.meta.json
 │   │   ├── importlib
@@ -1202,3 +882,166 @@
 └── update.log
 
 103 directories, 1099 files
+-e 
+=== Python Package Status ===
+-e Python version:
+Python 3.12.8
+-e Running tests:
+Audited 1 package in 3ms
+...../Users/adam/Developer/vcs/github.twardoch/pub/twardown-org/twardown-py/.
+venv/lib/python3.12/site-packages/coverage/inorout.py:524: CoverageWarning: M
+odule twardown_py was previously imported, but not measured (module-not-measu
+red)
+  self.warn(msg, slug="module-not-measured")
+                                                                 [100%]
+
+---------- coverage: platform darwin, python 3.12.8-final-0 ----------
+Coverage XML written to file coverage.xml
+
+5 passed in 0.35s
+-e Running type checks:
+Success: no issues found in 1 source file
+-e Running linting:
+All checks passed!
+3 files already formatted
+-e 
+=== JavaScript Package Status ===
+-e Node.js version:
+v22.10.0
+-e npm version:
+11.1.0
+-e Installing dependencies:
+
+up to date, audited 502 packages in 2s
+
+96 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+-e Running tests:
+
+> twardown-js@0.1.0 test
+> NODE_OPTIONS=--experimental-vm-modules jest
+
+ FAIL  test/index.test.js
+  ● Test suite failed to run
+
+    ReferenceError: require is not defined
+
+    > 1 | import { describe, expect, test } from '@jest/globals';
+        | ^
+      2 | import { unified } from 'unified'
+      3 | import remarkParse from 'remark-parse'
+      4 | import remarkStringify from 'remark-stringify'
+
+      at require (test/index.test.js:1:1)
+
+Test Suites: 1 failed, 1 total
+Tests:       0 total
+Snapshots:   0 total
+Time:        0.557 s
+Ran all test suites.
+(node:54828) ExperimentalWarning: VM Modules is an experimental feature and m
+ight change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+-e Tests failed
+-e Running linting:
+
+> twardown-js@0.1.0 lint
+> eslint src test
+
+
+> twardown-js@0.1.0 format:check
+> prettier --check '**/*.{js,jsx,ts,tsx,json,md}'
+
+Checking formatting...
+[warn] babel.config.js
+[warn] LOG.md
+[warn] src/index.js
+[warn] test/index.test.js
+[warn] Code style issues found in 4 files. Run Prettier with --write to fix.
+-e Format check failed
+-e 
+=== Documentation Status ===
+-e Installing dependencies:
+
+up to date, audited 62 packages in 1s
+
+20 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+-e Running Markdown linting:
+
+> twardown-docs@0.1.0 lint
+> markdownlint '**/*.md' --ignore node_modules
+
+dev/01-tests.md:5 MD025/single-title/single-h1 Multiple top-level headings in
+ the same document [Context: "# The Grand Theory of Antarcti..."]
+dev/01-tests.md:35:1 MD004/ul-style Unordered list style [Expected: dash; Act
+ual: asterisk]
+dev/01-tests.md:44:31 MD034/no-bare-urls Bare URL used [Context: "https://exa
+mple.com"]
+dev/01-tests.md:44:1 MD052/reference-links-images Reference links and images 
+should use a label that is defined [Missing link or image reference definitio
+n: "ref"] [Context: "[Latest Findings][ref]"]
+dev/02-twardown-js-01.md:9:29 MD034/no-bare-urls Bare URL used [Context: "htt
+ps://github.com/remarkjs/re..."]
+dev/02-twardown-js-01.md:36 MD028/no-blanks-blockquote Blank line inside bloc
+kquote
+dev/02-twardown-js-01.md:1233:3 MD034/no-bare-urls Bare URL used [Context: "h
+ttps://marketplace.visualstud..."]
+dev/02-twardown-js-01.md:1234:3 MD034/no-bare-urls Bare URL used [Context: "h
+ttps://github.com/remarkjs/vs..."]
+dev/03-twardown-js-02.md:29 MD031/blanks-around-fences Fenced code blocks sho
+uld be surrounded by blank lines [Context: "```json"]
+dev/03-twardown-js-02.md:887:1 MD030/list-marker-space Spaces after list mark
+ers [Expected: 1; Actual: 2]
+dev/03-twardown-js-02.md:892:1 MD030/list-marker-space Spaces after list mark
+ers [Expected: 1; Actual: 2]
+examples/basic.md:8 MD025/single-title/single-h1 Multiple top-level headings 
+in the same document [Context: "# Basic Twardown Example"]
+guides/getting-started.md:120 MD031/blanks-around-fences Fenced code blocks s
+hould be surrounded by blank lines [Context: "```markdown"]
+guides/getting-started.md:136 MD031/blanks-around-fences Fenced code blocks s
+hould be surrounded by blank lines [Context: "```json"]
+-e Markdown linting failed
+-e Running format check:
+
+> twardown-docs@0.1.0 format:check
+> prettier --check '**/*.md'
+
+Checking formatting...
+All matched files use Prettier code style!
+-e 
+=== CI Status ===
+-e Checking GitHub Actions status:
+-e 
+twardown-py:
+STATUS  TITLE          WORKFLOW  BRANCH  EVENT  ID         ELAPSED  AGE      
+✓       Update rep...  CI        main    push   133583...  23s      about ...
+-e 
+twardown-js:
+STATUS  TITLE          WORKFLOW  BRANCH  EVENT  ID         ELAPSED  AGE      
+X       Update rep...  CI        main    push   133583...  17s      about ...
+-e 
+twardown-docs:
+STATUS  TITLE          WORKFLOW  BRANCH  EVENT  ID         ELAPSED  AGE      
+X       Update rep...  CI        main    push   133584...  1m0s     about ...
+-e 
+twardown-org:
+⣽
+```
+
+---
+
+_****_
+
+
+
+---
+
+
+
+---
+
