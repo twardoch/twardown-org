@@ -1,0 +1,9 @@
+[submodule "twardown-docs"]
+    path = twardown-docs
+    url = https://github.com/twardoch/twardown-docs.git
+[submodule "twardown-js"]
+    path = twardown-js
+    url = https://github.com/twardoch/twardown-js.git
+[submodule "twardown-py"]
+    path = twardown-py
+    url = https://github.com/twardoch/twardown-py.git 
