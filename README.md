@@ -34,10 +34,10 @@ Each component has its own repository with specific development instructions:
 
 !!! important
 
-Instruction for the LLM: 
+Instruction for the LLM:
 
 ```
-Run `sh ./02-check.sh`, then implement the @TODO.md instructions in priority order & fix what fails. The edit the @LOG.md to report on what you've done, then run `sh ./03-up.sh` fix & retry. Occasionally adjust @README.md to more accurately describe the project as it is, and update @TODO.md to just focus on the things TBD. 
+Run `sh ./02-check.sh`, then implement the @TODO.md instructions in priority order & fix what fails. The edit the @LOG.md to report on what you've done, then run `sh ./03-up.sh` fix & retry. Occasionally adjust @README.md to more accurately describe the project as it is, and update @TODO.md to just focus on the things TBD.
 ```
 
 ## License
