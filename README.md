@@ -19,6 +19,7 @@ Twardown is a carefully curated set of Markdown extensions and configurations th
 ## Project Status
 
 The project is in active development. Current focus:
+
 - Defining the core Markdown extensions and features
 - Implementing basic plugin infrastructure
 - Setting up development environments and testing
@@ -26,9 +27,13 @@ The project is in active development. Current focus:
 ## Development
 
 Each component has its own repository with specific development instructions:
+
 - See `twardown-docs/` for the specification and documentation
 - See `twardown-js/` for the JavaScript implementation
 - See `twardown-py/` for the Python implementation
+
+!!! important
+Run `sh ./02-check.sh` then implement the TODO and then run `sh ./03-up.sh`. Fix whatever fails (making it more robust), retry. 
 
 ## License
 
