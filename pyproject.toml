@@ -1,0 +1,60 @@
+[project]
+name = "twardown"
+version = "0.1.0"  # Example version
+description = "Twardown Markdown extension for Python"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [
+    { name = "Adam Twardoch", email = "adam@twardoch.com" },
+]
+dependencies = [
+    "markdown>=3.5.2",
+    "rich>=13.7.1",
+    "pydantic>=2.6.4",
+    "loguru>=0.7.2",
+    "fire>=0.6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.1",
+    "pytest-cov>=4.1.0",
+    "mypy>=1.9.0",
+    "ruff>=0.3.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
+
+[tool.pytest.ini_options]
+addopts = "--cov=src/twardown --cov-report=xml --cov-report=term-missing"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["src/twardown"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "pass",
+    "raise ImportError",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88 
