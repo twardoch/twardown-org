@@ -12,22 +12,22 @@ this_file: src/twardown/core.py
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, List, Dict, Any, Optional, Tuple, Union
+from typing import TYPE_CHECKING, Any
 
 if TYPE_CHECKING:
     from markdown import Markdown
     from markdown.inlinepatterns import InlineProcessor
     from markdown.util import etree
-from markdown.extensions import Extension
-from markdown.treeprocessors import Treeprocessor
-from markdown.blockprocessors import BlockProcessor
-from markdown.inlinepatterns import InlineProcessor
-from markdown.preprocessors import Preprocessor
-from markdown.postprocessors import Postprocessor
-from markdown.parser import Parser
-from markdown import Markdown
+
 import re
-from typing import List, Dict, Any, Optional
+
+from markdown import Markdown
+from markdown.blockprocessors import BlockProcessor
+from markdown.extensions import Extension
+from markdown.inlinepatterns import InlineProcessor
+from markdown.postprocessors import Postprocessor
+from markdown.preprocessors import Preprocessor
+from markdown.treeprocessors import Treeprocessor
 
 
 def process_text(text: str) -> str:
@@ -59,7 +59,7 @@ class BoldInlineProcessor(InlineProcessor):
     def __init__(self, md: Markdown):
         super().__init__(r"\*\*([^*]+)\*\*|__([^_]+)__", md)
 
-    def handleMatch(self, m: re.Match, data: str) -> Tuple[Any, int, int]:
+    def handleMatch(self, m: re.Match, data: str) -> tuple[Any, int, int]:
         el = etree.Element("strong")
         el.text = m.group(1) or m.group(2)  # Handle both ** and __ patterns
         return el, m.start(0), m.end(0)
@@ -75,7 +75,7 @@ class ItalicInlineProcessor(InlineProcessor):
     def __init__(self, md: Markdown):
         super().__init__(r"\*([^*]+)\*|_([^_]+)_", md)
 
-    def handleMatch(self, m: re.Match, data: str) -> Tuple[Any, int, int]:
+    def handleMatch(self, m: re.Match, data: str) -> tuple[Any, int, int]:
         el = etree.Element("em")
         el.text = m.group(1) or m.group(2)  # Handle both * and _ patterns
         return el, m.start(0), m.end(0)
@@ -91,7 +91,7 @@ class LinkInlineProcessor(InlineProcessor):
     def __init__(self, md: Markdown):
         super().__init__(r'\[([^\]]+)\]\(([^)"]+)(?:\s+"([^"]+)")?\)', md)
 
-    def handleMatch(self, m: re.Match, data: str) -> Tuple[Any, int, int]:
+    def handleMatch(self, m: re.Match, data: str) -> tuple[Any, int, int]:
         el = etree.Element("a")
         el.text = m.group(1)
         el.set("href", m.group(2))
@@ -110,7 +110,7 @@ class CodeInlineProcessor(InlineProcessor):
     def __init__(self, md: Markdown):
         super().__init__(r"`([^`]+)`", md)
 
-    def handleMatch(self, m: re.Match, data: str) -> Tuple[Any, int, int]:
+    def handleMatch(self, m: re.Match, data: str) -> tuple[Any, int, int]:
         el = etree.Element("code")
         el.text = m.group(1)
         return el, m.start(0), m.end(0)
@@ -125,7 +125,7 @@ class ImageInlineProcessor(InlineProcessor):
     def __init__(self, md: Markdown):
         super().__init__(r'!\[([^\]]*)\]\(([^)"]+)(?:\s+"([^"]+)")?\)', md)
 
-    def handleMatch(self, m: re.Match, data: str) -> Tuple[Any, int, int]:
+    def handleMatch(self, m: re.Match, data: str) -> tuple[Any, int, int]:
         el = etree.Element("img")
         el.set("src", m.group(2))
         el.set("alt", m.group(1) or "")
@@ -138,7 +138,7 @@ class TwardownExtension(Extension):
     """Twardown extension for Python-Markdown."""
 
     def __init__(self, **kwargs: Any) -> None:
-        self.config: Dict[str, Any] = {
+        self.config: dict[str, Any] = {
             "option": ["default", "Description of the option"]
         }
         super().__init__(**kwargs)
@@ -184,7 +184,7 @@ class CodeBlockProcessor(BlockProcessor):
             self.INDENT_RE.match(block)
         )
 
-    def run(self, parent: Any, blocks: List[str]) -> None:
+    def run(self, parent: Any, blocks: list[str]) -> None:
         block = blocks.pop(0)
         m = self.FENCED_BLOCK_RE.match(block)
 
@@ -209,7 +209,7 @@ class ListBlockProcessor(BlockProcessor):
     def test(self, parent: Any, block: str) -> bool:
         return bool(self.INDENT_RE.match(block.split("\n")[0]))
 
-    def run(self, parent: Any, blocks: List[str]) -> None:
+    def run(self, parent: Any, blocks: list[str]) -> None:
         block = blocks.pop(0)
         m = self.INDENT_RE.match(block.split("\n")[0])
 
@@ -230,7 +230,7 @@ class TwardownBlockProcessor(BlockProcessor):
     def test(self, parent: Any, block: str) -> bool:
         return False  # TODO: Implement block processing logic
 
-    def run(self, parent: Any, blocks: List[str]) -> None:
+    def run(self, parent: Any, blocks: list[str]) -> None:
         pass  # TODO: Implement block processing logic
 
 
@@ -335,7 +335,7 @@ class TwardownPreprocessor(Preprocessor):
     TABLE_LINE_RE = re.compile(r"^\|(.+)\|$")
     TABLE_SEPARATOR_RE = re.compile(r"^\|(\s*:?-+:?\s*\|)+$")
 
-    def run(self, lines: List[str]) -> List[str]:
+    def run(self, lines: list[str]) -> list[str]:
         """Process the text before parsing.
 
         Args:
@@ -377,11 +377,11 @@ class TwardownPreprocessor(Preprocessor):
 
         return new_lines
 
-    def _parse_table_row(self, line: str) -> List[str]:
+    def _parse_table_row(self, line: str) -> list[str]:
         """Parse a table row into cells."""
         return [cell.strip() for cell in line.strip("|").split("|")]
 
-    def _parse_table_alignments(self, line: str) -> List[str]:
+    def _parse_table_alignments(self, line: str) -> list[str]:
         """Parse table alignments from separator line."""
         alignments = []
         for cell in line.strip("|").split("|"):
@@ -423,7 +423,7 @@ class TwardownPostprocessor(Postprocessor):
         return text
 
 
-def makeExtension(**kwargs: Dict[str, Any]) -> TwardownExtension:
+def makeExtension(**kwargs: dict[str, Any]) -> TwardownExtension:
     """Create an instance of the TwardownExtension.
 
     Args:

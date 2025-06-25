@@ -3,19 +3,12 @@
 this_file: tests/test_core.py
 """
 
-from typing import Any
-import pytest
+
 from markdown import Markdown
-from twardown.core import (
-    TwardownExtension,
-    BoldInlineProcessor,
-    ItalicInlineProcessor,
-    LinkInlineProcessor,
-    CodeInlineProcessor,
-    ImageInlineProcessor,
-    CodeBlockProcessor,
-    ListBlockProcessor,
-)
+from twardown.core import (BoldInlineProcessor, CodeBlockProcessor,
+                           CodeInlineProcessor, ImageInlineProcessor,
+                           ItalicInlineProcessor, LinkInlineProcessor,
+                           ListBlockProcessor, TwardownExtension)
 
 
 def test_process_text_basic():
