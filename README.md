@@ -8,6 +8,23 @@ This repository, `twardown-org`, serves as the central hub for the Twardown proj
 *   **`twardown-js`**: A JavaScript library, specifically a `unified.js`/`remark` plugin, that implements the Twardown specification. It's designed for easy integration into Node.js projects, static site generators, and other JavaScript-based Markdown workflows.
 *   **`twardown-py`**: A Python package that provides an extension for the popular `markdown` library. This allows Python applications to process Twardoch Markdown consistently with its JavaScript counterpart.
 
+The single source of truth for what "Twardoch Markdown" means is the specification in [`twardown-docs`](https://github.com/twardoch/twardown-docs). Both implementations are built to satisfy it.
+
+## Feature conformance
+
+Every feature below is defined once in [`twardown-docs`](https://github.com/twardoch/twardown-docs/blob/main/spec/index.md) and targeted by both implementations, so a document renders the same way in either language.
+
+| Feature | twardown-py | twardown-js |
+| ------- | :---------: | :---------: |
+| CommonMark core | ✅ | ✅ |
+| GFM tables (with alignment) | ✅ | ✅ |
+| Task lists (nested) | ✅ | ✅ |
+| YAML frontmatter | ✅ | ✅ |
+| Magic `this_file` records | ✅ | ✅ |
+| Strikethrough | ✅ | ✅ |
+
+If the two implementations ever disagree, the spec wins and the divergence is a bug — file it against the implementation, not the spec.
+
 ## Why Use Twardown?
 
 *   **Consistency:** Get the same Markdown rendering results whether you're working in a Python backend or a JavaScript frontend.
